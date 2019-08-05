@@ -13,10 +13,16 @@ public class Truck extends Car {
         super(name, tankCapacity, averageCombustion, airConditioning);
         this.weightCargo = weightCargo;
     }
+
     @Override
-    public double average(double value) {
-        return super.average(AIR_CONDITION_IS_ON_TRUCK + (getWeightCargo()*WEIGHT_CARGO)/100);
+    public double range() {
+        if (isAirConditioning()) {
+            return getTankCapacity() / (getAverageCombustion() + AIR_CONDITION_IS_ON_CAR + (getWeightCargo() * WEIGHT_CARGO) / 100) * 100;
+        } else {
+            return getTankCapacity() / (getAverageCombustion() + (getWeightCargo()*WEIGHT_CARGO)/100) * 100;
+        }
     }
+
     @Override
     public void showInfo() {
         super.showInfo();
