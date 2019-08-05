@@ -17,9 +17,9 @@ public class Truck extends Car {
     @Override
     public double range() {
         if (isAirConditioning()) {
-            return getTankCapacity() / (getAverageCombustion() + AIR_CONDITION_IS_ON_CAR + (getWeightCargo() * WEIGHT_CARGO) / 100) * 100;
+            return getTankCapacity() / (getAverageCombustion() + AIR_CONDITION_IS_ON_TRUCK + (((  getWeightCargo() * WEIGHT_CARGO)) / 100)) * 100;
         } else {
-            return getTankCapacity() / (getAverageCombustion() + (getWeightCargo()*WEIGHT_CARGO)/100) * 100;
+            return getTankCapacity() / (getAverageCombustion() + ((getWeightCargo()*WEIGHT_CARGO)/100)) * 100;
         }
     }
 
