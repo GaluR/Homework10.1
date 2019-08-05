@@ -11,7 +11,7 @@ public class TestClass {
             vehicles[i].setAirConditioning(true);
         }
         for (int i = 0; i < vehicles.length; i++) {
-            vehicles[i].showInfoIsON();
+            vehicles[i].showInfo();
         }
     }
 }

@@ -22,9 +22,6 @@ public class Car extends Vehicle {
         return getTankCapacity()/average(AIR_CONDITION_IS_ON_CAR)*100;
     }
     public void showInfo(){
-        System.out.printf("Samochód %s przejedzie na pełnym baku z wyłączoną klimatyzacją %.2f km\n",getName(), range());
-    }
-    public void showInfoIsON(){
-        System.out.printf("Samochód %s przejedzie na pełnym baku z włączoną klimatyzacją %.2f km\n",getName(), range());
+        System.out.printf("Pojazd %s przejedzie na pełnym baku z %s klimatyzacją %.2f km\n",getName(), isAirConditioning(), range());
     }
 }

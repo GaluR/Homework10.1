@@ -25,10 +25,6 @@ public class Truck extends Car {
     }
     @Override
     public void showInfo() {
-        System.out.printf("Ciężarówka %s przejedzie na pełnym baku z wyłączoną klimatyzacją %.2f km\n", getName(), range());
-    }
-    @Override
-    public void showInfoIsON() {
-        System.out.printf("Ciężarówka %s przejedzie na pełnym baku z włączoną klimatyzacją %.2f km\n", getName(), range());
+        super.showInfo();
     }
 }
