@@ -14,14 +14,12 @@ public class Car extends Vehicle {
     }
     public double average(double value){
         if(airConditioning){
-            setAverageCombustion(getAverageCombustion() + value);
-        }
-        return getAverageCombustion();
+           return getTankCapacity()/(getAverageCombustion() + value)*100;
+        }else{
+        return getTankCapacity()/getAverageCombustion()*100;
     }
-    public double range(){
-        return getTankCapacity()/average(AIR_CONDITION_IS_ON_CAR)*100;
     }
     public void showInfo(){
-        System.out.printf("Pojazd %s przejedzie na pełnym baku z %s klimatyzacją %.2f km\n",getName(), isAirConditioning(), range());
+        System.out.printf("Pojazd %s przejedzie na pełnym baku z %s klimatyzacją %.2f km\n",getName(), isAirConditioning(), average(AIR_CONDITION_IS_ON_CAR));
     }
 }
